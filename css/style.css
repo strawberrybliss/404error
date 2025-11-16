@@ -1,0 +1,24 @@
+* {
+    font-family: "Bruno-Ace";
+}
+
+.imgcarga {
+    width: 55%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carga-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pixelart {
+    display: flex;
+    width: 25%;
+}
