@@ -1,6 +1,98 @@
 * {
-    font-family: "Bruno-Ace";
+    font-family: "Bruno Ace";
 }
+
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse at bottom, #010111 0%, #060116 100%);
+    z-index: -1;
+    overflow: hidden;
+}
+
+.stars::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite ease-in-out;
+
+    box-shadow:
+        5vw 10vh white, 12vw 8vh white, 17vw 4vh white, 23vw 9vh white, 30vw 6vh white,
+        38vw 11vh white, 45vw 7vh white, 52vw 5vh white, 60vw 9vh white, 68vw 4vh white,
+        77vw 8vh white, 84vw 6vh white, 91vw 10vh white, 97vw 5vh white,
+
+        3vw 20vh white, 11vw 18vh white, 18vw 22vh white, 27vw 19vh white, 35vw 16vh white,
+        43vw 23vh white, 51vw 18vh white, 59vw 21vh white, 66vw 17vh white, 74vw 24vh white,
+        82vw 18vh white, 90vw 22vh white, 95vw 19vh white,
+
+        6vw 30vh white, 14vw 33vh white, 22vw 28vh white, 31vw 35vh white, 39vw 32vh white,
+        48vw 29vh white, 55vw 34vh white, 63vw 31vh white, 70vw 36vh white, 78vw 33vh white,
+        87vw 30vh white, 94vw 34vh white,
+
+        4vw 42vh white, 13vw 46vh white, 20vw 40vh white, 29vw 45vh white, 37vw 41vh white,
+        44vw 47vh white, 52vw 43vh white, 61vw 46vh white, 69vw 41vh white, 77vw 48vh white,
+        85vw 44vh white, 92vw 47vh white,
+
+        7vw 55vh white, 16vw 52vh white, 24vw 58vh white, 32vw 54vh white, 40vw 59vh white,
+        49vw 57vh white, 56vw 53vh white, 64vw 60vh white, 72vw 56vh white, 81vw 59vh white,
+        89vw 55vh white, 96vw 58vh white,
+
+        5vw 66vh white, 12vw 69vh white, 19vw 63vh white, 27vw 68vh white, 36vw 65vh white,
+        43vw 70vh white, 51vw 66vh white, 58vw 69vh white, 67vw 64vh white, 76vw 71vh white,
+        84vw 67vh white, 93vw 70vh white,
+
+        8vw 78vh white, 15vw 75vh white, 23vw 82vh white, 31vw 77vh white, 38vw 79vh white,
+        47vw 83vh white, 53vw 76vh white, 62vw 81vh white, 70vw 78vh white, 79vw 82vh white,
+        87vw 76vh white, 95vw 80vh white,
+
+        6vw 89vh white, 14vw 93vh white, 22vw 86vh white, 29vw 91vh white, 37vw 94vh white,
+        46vw 88vh white, 54vw 92vh white, 61vw 89vh white, 69vw 95vh white, 78vw 91vh white,
+        86vw 87vh white, 94vw 93vh white;
+}
+
+.stars::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2.4s infinite ease-in-out;
+
+    box-shadow:
+        10vw 12vh white, 28vw 9vh white, 44vw 14vh white, 61vw 11vh white, 79vw 13vh white,
+        92vw 9vh white,
+
+        8vw 25vh white, 22vw 27vh white, 37vw 23vh white, 55vw 28vh white, 73vw 26vh white,
+        90vw 24vh white,
+
+        12vw 38vh white, 29vw 35vh white, 47vw 39vh white, 63vw 34vh white, 80vw 36vh white,
+        94vw 33vh white,
+
+        6vw 50vh white, 21vw 53vh white, 38vw 49vh white, 57vw 54vh white, 75vw 52vh white,
+        89vw 50vh white,
+
+        9vw 63vh white, 25vw 60vh white, 42vw 65vh white, 60vw 62vh white, 76vw 66vh white,
+        93vw 61vh white,
+
+        11vw 75vh white, 27vw 72vh white, 45vw 78vh white, 64vw 73vh white, 82vw 76vh white,
+        96vw 71vh white,
+
+        13vw 88vh white, 30vw 85vh white, 48vw 90vh white, 66vw 87vh white, 84vw 92vh white,
+        97vw 88vh white;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
 
 .cont-carga {
     position: relative;
@@ -27,4 +119,12 @@
     width: 20%;
     justify-content: center;
     align-items: center;
+}
+
+.t-1 {
+    color: white;
+    font-size: 1.75em;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
