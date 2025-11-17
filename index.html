@@ -22,28 +22,40 @@
 
 <body>
 
-
+    <!-- cielo estrellas -->
     <div class="stars"></div>
 
-
-    <!-- ventana modal pantalla de carga -->
-    <header>
-        <section id="carga">
-            <div class="cont-carga">
-                <img class="imgcarga" src="media/img/cargaimg.svg">
-                <div id="pixel">
-                    <img class="pixelart" src="media/img/tierra.png">
-                    <img class="pixelart" src="media/img/martefav.webp">
-                </div>
-                <div id="travel">
-                        <p class="t-1">Travelling progress ...</p>
-                        <div id="barra">
-                            <span id="barra-carga"></span>
-                        </div>
+    <!-- pantalla de carga -->
+    <section id="carga">
+        <div class="cont-carga">
+            <img class="imgcarga" src="media/img/cargaimg.svg">
+            <div id="pixel">
+                <img class="pixelart" src="media/img/tierra.png">
+                <img id="cohete" class="pixelart" src="media/img/cohete.png">
+                <img class="pixelart" src="media/img/martefav.webp">
+            </div>
+            <div id="travel">
+                <p class="t-1">Travelling progress<span class="dots"></span></p>
+                <div id="barra">
+                    <span id="barra-carga"></span>
                 </div>
             </div>
-        </section>
-    </header>
+        </div>
+    </section>
+
+    <!-- transición intermedia -->
+    <section id="p-alarma">
+        <div>
+            <img id="alarma-icon" src="media/img/alerta.png" alt="Alerta">
+        </div>
+        <div id="flash"></div>
+    </section>
+
+    <!-- pantalla 404 -->
+     <section id="final">
+        <h1 class="texto">404</h1>
+        <button class="boton">Go back home</button>
+     </section>
 
 
 </body>

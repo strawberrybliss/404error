@@ -135,6 +135,10 @@ p {
     align-items: center;
 } */
 
+#carga.fade-out {
+    opacity: 0;
+    transition: opacity 0.4s ease; /* DESAPARECE RÁPIDO ANTES QUE EL FLASH */
+}
 
 .imgcarga {
     width: 85%;
@@ -148,7 +152,7 @@ p {
     justify-content: center;
     align-items: center;
     display: flex;
-    gap: 53%;
+    gap: 15%;
     position:absolute;
     width:85%;
     margin: 0.5em 0;
@@ -157,10 +161,20 @@ p {
 
 .pixelart {
     width: 15%;
-    /* justify-content: center; */
     align-items: center;
 }
 
+/* Animación cohete */
+
+#cohete {
+    animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-16px); }
+    100% { transform: translateY(0px); }
+}
 
 #travel {
     justify-content: center;
@@ -179,6 +193,29 @@ p {
     justify-content: center;
     align-items: center;
     display: flex;
+}
+
+/* Animación de puntos suspensivos */
+
+.dots::after {
+    content: '';
+    display: inline-block;
+    width: 3em;
+    text-align: left;
+    animation: puntos 2.5s steps(4, end) infinite;
+    letter-spacing: 0.15em;
+    margin-left: 0.2em;
+}
+
+@keyframes puntos {
+    0%  { content: ''; }
+    20%  { content: '.'; }
+    35%  { content: '..'; }
+    50%  { content: '...'; }
+    65%  { content: '..'; }
+    80%  { content: '.'; }
+    100%  { content: ''; }
+
 }
 
 
@@ -201,4 +238,86 @@ p {
     margin:0 0.1em;
 }
 
+/* --- Barra de carga simple --- */
+#barra-carga {
+    width: 0%;
+    transition: width 2.2s ease-out;
+}
 
+/* --- Alarma encima del loading sin ocultarlo --- */
+#p-alarma {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#alarma-icon {
+    width: 100%;
+    z-index: 10;
+}
+
+/* Fondo rojo para el parpadeo */
+#flash {
+    position: fixed;
+    inset: 0;
+    background: rgb(162, 43, 43);
+    opacity: 0;
+    z-index: 5;
+}
+
+@keyframes flashAlarma {
+    0%   { opacity: 0; }
+    20%  { opacity: 0.3; }
+    30%  { opacity: 0; }
+
+    45%  { opacity: 0.5; }
+    55%  { opacity: 0; }
+
+    70%  { opacity: 1; }
+    80%  { opacity: 1; }
+
+    /* ÚLTIMO PARPADEO: se mantiene fuerte un momento */
+    90%  { opacity: 0; }
+    95%  { opacity: 0; }
+
+    /* Fade-out más largo y suave */
+    100% { opacity: 2; }
+}
+
+/* Activación */
+.flash-activo {
+    animation: flashAlarma 5.5s ease forwards; /* antes 2.5s */
+}
+
+/* Fade general para icono y pantalla */
+.fade-out {
+    opacity: 0.2 !important;
+    transition: opacity 100s ease;  /* puedes ampliar si quieres más suavidad */
+}
+
+#final {
+    display: flex;
+    flex-direction: column; /* apilar h1 y button */
+    justify-content: center; /* centrar vertical */
+    align-items: center;     /* centrar horizontal */
+    height: 100vh;           /* ocupar toda la pantalla */
+
+}
+
+.texto {
+    color: white;
+    font-family: "Bruno Ace";
+    display: flex;
+    font-size: 9em;
+}
+
+.boton {
+    font-family: "Bruno Ace";
+    display: flex;
+    font-size: 2em;
+}
