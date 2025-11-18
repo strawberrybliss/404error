@@ -21,8 +21,12 @@ h1 {
     top: 0;
     left: 0;
     background: radial-gradient(ellipse at bottom, #010111 0%, #060116 100%);
+    background-image: url(../media/img/galaxiafondo.png);
     z-index: -1;
     overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -326,4 +330,13 @@ h1 {
     font-family: "Bruno Ace";
     display: flex;
     font-size: 2em;
+    border-radius: 2em;
+    padding: 0.2em 1em;
+    color: white;
+}
+
+button {
+    background-color:rgb(162, 43, 43);
+    border-width: 0;
+
 }
