@@ -8,7 +8,7 @@ p {
     margin: 0;
 }
 
-h1 {
+h1, h2 {
     margin: 0;
     padding: 0;
 }
@@ -316,23 +316,44 @@ h1 {
 
 #contenedor {
     flex-direction: column;
-    gap: 5em;
+    gap: 2.5em;
 }
 
 .texto {
     color: white;
     font-family: "Bruno Ace";
     display: flex;
-    font-size: 9em;
+    font-size: 12em;
+    flex-direction: column;
+    align-items: center;
+}
+
+#mensaje {
+    font-size: 0.9em;
+    gap: 0.5em;
+}
+
+.color {
+    color:rgb(162, 43, 43);
 }
 
 .boton {
     font-family: "Bruno Ace";
     display: flex;
-    font-size: 2em;
+    font-size: 1.3em;
     border-radius: 2em;
-    padding: 0.2em 1em;
+    padding: 0.4em 1.4em;
     color: white;
+    animation: neon-pulse 1.5s infinite alternate;
+}
+
+@keyframes neon-pulse {
+    0% {
+        box-shadow: 0 0 5px rgb(162, 43, 43), 0 0 10px rgb(162, 43, 43), 0 0 20px rgba(162, 43, 43, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 10px rgb(162, 43, 43), 0 0 20px rgb(162, 43, 43), 0 0 30px rgb(162, 43, 43), 0 0 40px rgba(162, 43, 43, 0.6);
+    }   
 }
 
 button {
