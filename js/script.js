@@ -35,17 +35,20 @@ window.addEventListener("load", () => {
 
             // C) Mostrar pantalla final suavemente después del fade
             setTimeout(() => {
-                // Activar opacidad de la pantalla final
+
+                // --- CAMBIO IMPORTANTE ---
+                pantallaFinal.style.display = "flex"; // <<< NECESARIO PARA QUE APAREZCA
+
                 pantallaFinal.style.opacity = 1;
                 pantallaFinal.style.pointerEvents = "auto";
 
                 // Limpiar elementos anteriores
                 carga.remove();
                 alarma.remove();
+
             }, 1400); // coincide con la duración del fade
 
         }, 3000); // momento exacto del último flash
 
     }, 2800); // tiempo después de iniciar barra de carga
 });
-

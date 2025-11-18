@@ -8,6 +8,11 @@ p {
     margin: 0;
 }
 
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
 
 .stars {
     position: fixed;
@@ -275,7 +280,7 @@ p {
     20%  { opacity: 0.3; }
     30%  { opacity: 0; }
 
-    45%  { opacity: 0.5; }
+    45%  { opacity: 0.6; }
     55%  { opacity: 0; }
 
     70%  { opacity: 1; }
@@ -301,12 +306,13 @@ p {
 }
 
 #final {
-    display: flex;
-    flex-direction: column; /* apilar h1 y button */
-    justify-content: center; /* centrar vertical */
-    align-items: center;     /* centrar horizontal */
-    height: 100vh;           /* ocupar toda la pantalla */
+    display: none; /* hay que recordar que lo para que se oculte al principo */
+    opacity: 0;
+}
 
+#contenedor {
+    flex-direction: column;
+    gap: 5em;
 }
 
 .texto {
