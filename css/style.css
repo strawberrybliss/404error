@@ -274,7 +274,7 @@ h1, h2 {
 #flash {
     position: fixed;
     inset: 0;
-    background: rgb(162, 43, 43);
+    background: rgb(118, 13, 13);
     opacity: 0;
     z-index: 5;
 }
@@ -319,13 +319,73 @@ h1, h2 {
     gap: 2.5em;
 }
 
+.mars {
+    width: 14em;
+    justify-content: center;
+    align-items: center;
+    animation: flicker 3.5s infinite;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { 
+    opacity: 1;
+  }
+  20%, 22%, 24%, 55% { 
+    opacity: 0.1;
+  }
+}
+
+.main {
+    width: 14em;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    animation: float 10s ease-in-out infinite;
+}
+
+/* Desfasamos la animación de cada imagen para que no coincidan */
+.main:nth-child(1) { animation-delay: 0s; }
+.main:nth-child(2) { animation-delay: 0.6s; }
+.main:nth-child(3) { animation-delay: 1.5s; }
+.main:nth-child(4) { animation-delay: 0.7s; }
+
+/* Animación flotante más orgánica */
+@keyframes float {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  10% {
+    transform: translate(5px, -8px) rotate(-2deg);
+  }
+  25% {
+    transform: translate(-7px, 10px) rotate(1deg);
+  }
+  40% {
+    transform: translate(10px, -5px) rotate(-1deg);
+  }
+  55% {
+    transform: translate(-5px, 7px) rotate(2deg);
+  }
+  70% {
+    transform: translate(8px, -10px) rotate(-2deg);
+  }
+  85% {
+    transform: translate(-10px, 5px) rotate(1deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
 .texto {
-    color: white;
+    color: rgb(226, 226, 226);
     font-family: "Bruno Ace";
     display: flex;
     font-size: 12em;
     flex-direction: column;
     align-items: center;
+    margin-top: 1.25em;
+    margin-bottom: 1.5em;
 }
 
 #mensaje {
@@ -334,7 +394,7 @@ h1, h2 {
 }
 
 .color {
-    color:rgb(162, 43, 43);
+  color: rgb(226, 226, 226);
 }
 
 .boton {
@@ -343,8 +403,13 @@ h1, h2 {
     font-size: 1.3em;
     border-radius: 2em;
     padding: 0.4em 1.4em;
-    color: white;
     animation: neon-pulse 1.5s infinite alternate;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(226, 226, 226);
 }
 
 @keyframes neon-pulse {
@@ -357,7 +422,12 @@ h1, h2 {
 }
 
 button {
-    background-color:rgb(162, 43, 43);
+    background-color: rgb(118, 13, 13);
     border-width: 0;
-
 }
+
+
+/* media queries para móvil */
+
+
+/* media queries para tablet */
