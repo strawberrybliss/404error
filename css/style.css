@@ -2,7 +2,6 @@
     font-family: "Bruno Ace";
 }
 
-
 p {
     padding: 0;
     margin: 0;
@@ -12,7 +11,6 @@ h1, h2 {
     margin: 0;
     padding: 0;
 }
-
 
 .stars {
     position: fixed;
@@ -29,7 +27,6 @@ h1, h2 {
     background-position: center;
 }
 
-
 .stars::before {
     content: "";
     position: absolute;
@@ -38,7 +35,6 @@ h1, h2 {
     background: white;
     border-radius: 50%;
     animation: twinkle 2s infinite ease-in-out;
-
 
     box-shadow:
         5vw 10vh white, 12vw 8vh white, 17vw 4vh white, 23vw 9vh white, 30vw 6vh white,
@@ -81,7 +77,6 @@ h1, h2 {
         86vw 87vh white, 94vw 93vh white;
 }
 
-
 .stars::after {
     content: "";
     position: absolute;
@@ -121,7 +116,6 @@ h1, h2 {
         97vw 88vh white;
 }
 
-
 @keyframes twinkle {
     0%, 100% { opacity: 0.3; }
     50% { opacity: 1; }
@@ -129,14 +123,13 @@ h1, h2 {
 .cont-carga {
     position: relative;
     width: 55%;
-    height: 95vh;
+    height: 96vh;
     margin: auto;
     display: flex;
     justify-content:center;
     align-items: center;
     /* background-image:url('../media/img/cargaimg.svg'); */
 }
-
 
 /* #carga {
     display: flex;
@@ -154,7 +147,6 @@ h1, h2 {
     /* height: 100%; */
 }
 
-
 #pixel {      
     top: 31%;
     /* left: 50%; */
@@ -166,7 +158,6 @@ h1, h2 {
     width:85%;
     margin: 0.5em 0;
 }
-
 
 .pixelart {
     width: 15%;
@@ -194,7 +185,6 @@ h1, h2 {
     top: 57%;
     flex-direction: column;
 }
-
 
 .t-1 {
     color: #282e69;
@@ -227,7 +217,6 @@ h1, h2 {
 
 }
 
-
 #barra {
     border-radius: 0.3em;
     border: #282e69 3.5px solid;
@@ -237,7 +226,6 @@ h1, h2 {
     display: flex;
     align-items: center;
 }
-
 
 #barra-carga {
     border-radius: 0.1em;
@@ -317,10 +305,11 @@ h1, h2 {
 #contenedor {
     flex-direction: column;
     gap: 2.5em;
+    width: unset;
 }
 
 .mars {
-    width: 14em;
+    width: 17em;
     justify-content: center;
     align-items: center;
     animation: flicker 3.5s infinite;
@@ -426,8 +415,59 @@ button {
     border-width: 0;
 }
 
+/* media queries para tablet */
+
+@media (min-width: 430px) and (max-width: 1250px) {
+    
+    .cont-carga {
+        width: 70%;
+        height: 97vh;;
+    }
+
+    .imgcarga {
+        width: 100%;
+    }
+
+    .pixelart {
+        width: 20%;
+        gap: 0;
+    }
+
+    #pixel {      
+        top: 41%;
+        gap: 12%;
+    }
+
+    .t-1 {
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+    }
+
+    #travel {
+        top: 54%;
+    }
+
+    .dots::after {
+    width: 1em;
+    }
+
+    .main {
+        width: 12em;
+    }
+
+    .mars {
+        width: 15em;
+    }
+
+    a {
+        font-size: 1.3em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+}
 
 /* media queries para móvil */
 
-
-/* media queries para tablet */
