@@ -27,6 +27,8 @@ h1, h2 {
     background-position: center;
 }
 
+/* Animación de las estrellas */
+
 .stars::before {
     content: "";
     position: absolute;
@@ -128,33 +130,24 @@ h1, h2 {
     display: flex;
     justify-content:center;
     align-items: center;
-    /* background-image:url('../media/img/cargaimg.svg'); */
 }
-
-/* #carga {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
 #carga.fade-out {
     opacity: 0;
-    transition: opacity 0.4s ease; /* DESAPARECE RÁPIDO ANTES QUE EL FLASH */
+    transition: opacity 0.4s ease;
 }
 
 .imgcarga {
     width: 85%;
-    /* height: 100%; */
 }
 
 #pixel {      
     top: 31%;
-    /* left: 50%; */
     justify-content: center;
     align-items: center;
     display: flex;
     gap: 15%;
-    position:absolute;
+    position: absolute;
     width:85%;
     margin: 0.5em 0;
 }
@@ -180,7 +173,7 @@ h1, h2 {
     justify-content: center;
     align-items: center;
     display: flex;
-    position:absolute;
+    position: absolute;
     width:85%;
     top: 57%;
     flex-direction: column;
@@ -235,13 +228,15 @@ h1, h2 {
     margin:0 0.1em;
 }
 
-/* --- Barra de carga simple --- */
+/* Barra de carga */
+
 #barra-carga {
     width: 0%;
     transition: width 2.2s ease-out;
 }
 
-/* --- Alarma encima del loading sin ocultarlo --- */
+/* Alarma */
+
 #p-alarma {
     position: fixed;
     inset: 0;
@@ -258,7 +253,8 @@ h1, h2 {
     z-index: 10;
 }
 
-/* Fondo rojo para el parpadeo */
+/* Fondo rojo y parpadeo de la alarma */
+
 #flash {
     position: fixed;
     inset: 0;
@@ -278,27 +274,23 @@ h1, h2 {
     70%  { opacity: 1; }
     80%  { opacity: 1; }
 
-    /* ÚLTIMO PARPADEO: se mantiene fuerte un momento */
     90%  { opacity: 0; }
     95%  { opacity: 0; }
 
-    /* Fade-out más largo y suave */
     100% { opacity: 2; }
 }
 
-/* Activación */
 .flash-activo {
-    animation: flashAlarma 5.5s ease forwards; /* antes 2.5s */
+    animation: flashAlarma 5.5s ease forwards;
 }
 
-/* Fade general para icono y pantalla */
 .fade-out {
     opacity: 0.2 !important;
-    transition: opacity 100s ease;  /* puedes ampliar si quieres más suavidad */
+    transition: opacity 100s ease;
 }
 
 #final {
-    display: none; /* hay que recordar que lo para que se oculte al principo */
+    display: none;
     opacity: 0;
 }
 
@@ -314,6 +306,8 @@ h1, h2 {
     align-items: center;
     animation: flicker 3.5s infinite;
 }
+
+/* Animación de Marte */
 
 @keyframes flicker {
   0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { 
@@ -332,13 +326,13 @@ h1, h2 {
     animation: float 10s ease-in-out infinite;
 }
 
-/* Desfasamos la animación de cada imagen para que no coincidan */
+/* Animación de los números */
+
 .main:nth-child(1) { animation-delay: 0s; }
 .main:nth-child(2) { animation-delay: 0.6s; }
 .main:nth-child(3) { animation-delay: 1.5s; }
 .main:nth-child(4) { animation-delay: 0.7s; }
 
-/* Animación flotante más orgánica */
 @keyframes float {
   0% {
     transform: translate(0px, 0px) rotate(0deg);
@@ -415,7 +409,8 @@ button {
     border-width: 0;
 }
 
-/* media queries para tablet */
+
+/* Media Queries Tablet */
 
 @media (min-width: 430px) and (max-width: 1250px) {
     
@@ -469,5 +464,53 @@ button {
     }
 }
 
-/* media queries para móvil */
+/* Media Queries Móvil */
+
+@media (max-width: 600px) {
+
+    .cont-carga {
+        width: 92%;
+    }
+
+    #pixel {
+        top: 41.5%;
+    }
+
+    #travel {
+        top: 53%;
+    }
+
+    .pixelart {
+        width: 18%;
+    }
+
+    .t-1 {
+        font-size: 0.9em;
+    }
+
+    #barra {
+        height: 1em;
+    }
+
+    #barra-carga {
+        height: 0.8em;
+    }
+
+    .main {
+        width: 5em;
+    }
+
+    .mars {
+        width: 8em;
+    }
+
+    a {
+        font-size: 0.7em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+}
 
